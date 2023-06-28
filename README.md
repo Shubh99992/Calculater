@@ -6,6 +6,8 @@
  ![Calculator image loading](image.png) 
 <hr>
 
+You can try this calculator by using this link => [https://shubh99992.github.io/Calculater/](https://shubh99992.github.io/Calculater/)
+
 <h3 align="center">Show some ❤ by <img src="https://imgur.com/o7ncZFp.jpg" height=25px width=25px> some repositories .</h3>
 </center>
 

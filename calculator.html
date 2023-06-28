@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Calculator</title>
+
+	<style type="text/css">
+		body {
+			background-color: #000;
+		}
+
+		.container {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			border: 7px solid #000;
+			border-radius: 15px;
+			padding: 15px;
+			background-color: green;
+		}
+
+		input {
+			width: 75px;
+			height: 60px;
+			font-size: 25px;
+			margin-top: 4px;
+			background-color: #fff;
+			font-weight: bold;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input:active {
+			background-color: orange;
+		}
+
+		.search {
+			width: 300px;
+			height: 50px;
+			text-align: right;
+			padding-right: 10px;
+			font-size: 30px;
+			margin-bottom: -9px;
+			border-radius: 10px;
+
+		}
+
+		h1 {
+			top: 10%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			position: absolute;
+			font-size: 40px;
+		}
+
+		.eql {
+			background-color: orange;
+		}
+
+		h1 {
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<form name="cal">
+			<input type="text" class="search" name="text"><br><br>
+			<input type="button" name="clear" value=C onclick="text.value = '' ">
+			<input type="button" name="back" value="<"
+				onclick="cal.text.value = cal.text.value.substring(0,cal.text.value.length-1)"><br>
+			<input type="button" name="btn9" value=9 onclick="show(btn9.value)">
+			<input type="button" name="btn8" value=8 onclick="show(btn8.value)">
+			<input type="button" name="btn7" value=7 onclick="show(btn7.value)">
+			<input type="button" name="divide" value=/ onclick="show(divide.value)"><br>
+			<input type="button" name="btn6" value=6 onclick="show(btn6.value)">
+			<input type="button" name="btn5" value=5 onclick="show(btn5.value)">
+			<input type="button" name="btn4" value=4 onclick="show(btn4.value)">
+			<input type="button" name="mul" value=* onclick="show(mul.value)"><br>
+			<input type="button" name="btn3" value=3 onclick="show(btn3.value)">
+			<input type="button" name="btn2" value=2 onclick="show(btn2.value)">
+			<input type="button" name="btn1" value=1 onclick="show(btn1.value)">
+			<input type="button" name="sub" value=- onclick="show(sub.value)"><br>
+			<input type="button" name="btn0" value=0 onclick="show(btn0.value)">
+			<input type="button" name="dout" value=. onclick="show(dout.value)">
+			<input type="button" name="equal" class="eql" value="=" onclick="text.value=eval(text.value)">
+			<input type="button" name="add" value=+ onclick="show(add.value)">
+
+
+
+		</form>
+	</div>
+
+
+	<script type="text/javascript">
+		function show(n) {
+			cal.text.value = cal.text.value + n;
+		}
+
+		function back(n) {
+			cal.text.value = cal.text.value - n;
+		}
+	</script>
+
+
+</body>
+
+</html>
